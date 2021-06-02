@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Investor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aladin">
+    <link rel="stylesheet" href="{% static 'css/Contact-Form-Clean.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Features-Boxed.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Footer-Basic.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Highlight-Blue.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Highlight-Clean.css' %}">
+    <link rel="stylesheet" href="{% static 'css/project-card.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body style="background: rgb(193,227,255);">
+    <nav class="navbar navbar-light navbar-expand bg-light navigation-clean">
+        <div class="container-fluid"><a class="navbar-brand font-monospace text-uppercase" href="{% url 'Investor:vc_invest' %}" style="font-size: 30px;">VC Investor</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"></button>
+            {% if request.user.username == investor.name %}
+                <div class="collapse navbar-collapse" id="navcol-1"><a class="btn btn-primary ms-auto" role="button" href="{% url 'Investor:find_startup' %}">Find Startup</a></div>
+            {% else %}
+                <div class="collapse navbar-collapse" id="navcol-1"><a class="btn btn-primary ms-auto" role="button" href="{% url 'Investor:create_investor' %}">Find Startup</a></div>
+            {% endif %}
+        </div>
+    </nav>
+    <section style="margin: 10px;">
+        <div class="container-md" style="text-align: center;">
+            <h1 class="display-1">Venture Capital Investor</h1>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-xl-5 offset-xl-1 d-flex justify-content-center"><img src="../static/img/statistics.jpg" style="width: 360px;border-radius: 40px;"></div>
+            <div class="col-md-6 col-xl-5 d-flex justify-content-center"><img src="../static/img/audit.jpg" style="width: 360px;border-radius: 40px;"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-10 offset-lg-1" style="margin-top: 31px;">
+                <section class="highlight-blue" style="border-radius: 60px;">
+                    <div class="container">
+                        <div class="intro">
+                            <h2 class="text-center" style="font-size: 50px;">Find the best start-up!</h2>
+                            <p class="text-center" style="font-size: 19px;">Create an investor account and find the best start-ups to invest in. Ranging from sectors like technology to healthcare.</p>
+                        </div>
+                        <div class="buttons"><a class="btn btn-primary btn-lg" role="button" {% if investor %}href="{% url 'Investor:find_startup' %}" {% else %}href="{% url 'Investor:create_investor' %}"{% endif %} style="font-size: 24px;">INVEST</a></div>
+                        <div class="buttons"><a class="btn btn-primary btn-lg" role="button" href="{% url 'Investor:create_investor' %}" style="font-size: 24px;">Create Profile</a></div>
+                        <div class="buttons"><a class="btn btn-primary btn-lg" role="button" href="{% url 'Investor:references' %}" style="font-size: 24px;">References</a></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-basic" style="padding-top: 18px;margin-top: 53px;">
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Home</a></li>
+            <li class="list-inline-item"></li>
+            <li class="list-inline-item"><a href="#">About</a></li>
+            <li class="list-inline-item"></li>
+            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">VC Investor © 2021</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
