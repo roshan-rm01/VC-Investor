@@ -34,7 +34,7 @@
         <form method="post" style="padding: 40px;margin-top: 30px;" action="{% url 'Investor:find_startup' %}">
             {% csrf_token %}
             <h2 class="text-center">Start-up Questionnaire</h2>
-            <div class="mb-3"><label class="form-label">What sector are you targeting?</label><select class="form-select" name="sector">
+            <div class="mb-3"><label class="form-label">What sector are you targeting?</label><select class="form-select" name="sector" required>
                     <option selected="">Select Option</option>
                     <option value="entertainment">Entertainment</option>
                     <option value="fintech">Fintech</option>
@@ -45,7 +45,7 @@
                     <option value="robotics">Robotics</option>
                     <option value="None">No Preference</option>
                 </select></div>
-            <div class="mb-3"><label class="form-label">What country should the start-up be based in?</label><select class="form-select" name="location">
+            <div class="mb-3"><label class="form-label">What country should the start-up be based in?</label><select class="form-select" name="location" required>
                     <option selected="">Select Option</option>
                     <option value="United Kingdom">United Kingdom</option>
                     <option value="France">France</option>
@@ -55,26 +55,27 @@
                     <option value="Spain">Spain</option>
                     <option value="None">No Preference</option>
                 </select></div>
-            <div class="mb-3"><label class="form-label">What stage of funding should the start-up be at?</label><select class="form-select" name="stage">
+            <div class="mb-3"><label class="form-label">What stage of funding should the start-up be at?</label><select class="form-select" name="stage" required>
                     <option selected="">Select Option</option>
                     <option value="series b">Series B</option>
                     <option value="series c">Series C</option>
                     <option value="series d">Series D</option>
                     <option value="series e">Series E</option>
+                    <option value="None">No Preference</option>
                 </select></div>
-            <div class="mb-3"><label class="form-label">What should the valuation range for the start-up?</label><select class="form-select" name="valuation">
+            <div class="mb-3"><label class="form-label">What should the valuation range for the start-up?</label><select class="form-select" name="valuation" required>
                     <option selected="">Select Option</option>
                     <option value="1000">£10m - £1000m</option>
                     <option value="3000">£1000 - £3000m</option>
                     <option value="12000">£3000m - £12000m</option>
                 </select><small class="form-text">*&nbsp;Figures are in GBP (£) millions.</small></div>
-            <div class="mb-3"><label class="form-label">How old should the start-up be?</label><select class="form-select" name="year">
+            <div class="mb-3"><label class="form-label">How old should the start-up be?</label><select class="form-select" name="year" required>
                     <option selected="">Select Option</option>
                     <option value="4">2 - 4 years</option>
                     <option value="6">5 - 6 years</option>
                     <option value="10">7 - 10 years</option>
                 </select></div>
-            <div class="mb-3"><label class="form-label">How much revenue should the start-up generate?</label><select class="form-select" name="revenue">
+            <div class="mb-3"><label class="form-label">How much revenue should the start-up generate?</label><select class="form-select" name="revenue" required>
                     <option selected="">Select Option</option>
                     <option value="30">£4 - 30m</option>
                     <option value="70">£31 - 70m</option>

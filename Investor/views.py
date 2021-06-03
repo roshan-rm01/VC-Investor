@@ -58,7 +58,7 @@ def find_startup(request):
         for company in companies:
             if sector == "None" or sector == company.sector:
                 if location == "None" or location == company.location:
-                    if company.stage == stage:
+                    if stage == "None" or company.stage == stage:
                         launch = 2021 - int(year)
                         if int(valuation) == 1000:
                             if company.valuation < int(valuation):
