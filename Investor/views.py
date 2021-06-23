@@ -86,7 +86,3 @@ def startup_list(request):
 def about_startup(request, slug):
     company = get_object_or_404(Company, slug=slug)
     return render(request, '../VCTemplate/about_startup.html', {'company': company})
-
-
-def references(request):
-    return render(request, '../VCTemplate/references.html')

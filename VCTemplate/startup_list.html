@@ -43,7 +43,9 @@
                         <div class="card-body">
                             <h4 class="card-title">{{ company.name }}</h4>
                             <h6 class="text-muted card-subtitle mb-2">{{ company.sector|title }}</h6>
-                            <p class="card-text">{{ company.description|truncatewords:30 }}</p><button class="btn btn-primary" type="button"><a class="btn btn-primary btn-lg" role="button" href="{% url 'Investor:about_startup' company.slug %}" style="font-size: 24px;">INFO</a></button>
+                            <p class="card-text">{{ company.description|truncatewords:30 }}</p>
+                            <button class="btn btn-primary" type="button"><a class="btn btn-primary btn-lg" role="button" href="{% url 'Investor:about_startup' company.slug %}" style="font-size: 24px;">INFO</a></button>
+                            <button class="btn btn-primary" type="button"><a class="btn btn-primary btn-lg" role="button" href="" style="font-size: 24px;">ADD</a></button>
                         </div>
                     </div>
                 </div>

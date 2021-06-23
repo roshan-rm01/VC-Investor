@@ -21,7 +21,7 @@
 
 <body style="background: rgb(193,227,255);">
     <nav class="navbar navbar-light navbar-expand bg-light navigation-clean">
-        <div class="container-fluid"><a class="navbar-brand font-monospace text-uppercase" href="index.html" style="font-size: 30px;">VC Investor</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"></button>
+        <div class="container-fluid"><a class="navbar-brand font-monospace text-uppercase" href="{% url "Investor:vc_invest" %}" style="font-size: 30px;">VC Investor</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"></button>
             <div class="collapse navbar-collapse" id="navcol-1"><a class="btn btn-primary ms-auto" role="button" href="{% url 'Investor:vc_invest' %}">HOME</a></div>
         </div>
     </nav>

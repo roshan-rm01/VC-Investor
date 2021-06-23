@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from django.views.generic import TemplateView
 
 
 app_name = 'Investor'
@@ -10,5 +11,5 @@ urlpatterns = [
     path('find_startup', views.find_startup, name="find_startup"),
     path('startup_list', views.startup_list, name="startup_list"),
     path('about_startup/<slug:slug>', views.about_startup, name="about_startup"),
-    path('references', views.references, name="references")
+    path('references', TemplateView.as_view(template_name='../VCTemplate/references.html'), name="references")
 ]

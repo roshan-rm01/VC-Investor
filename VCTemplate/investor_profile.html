@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Investor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aladin">
+    <link rel="stylesheet" href="{% static 'css/Contact-Form-Clean.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Features-Boxed.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Footer-Basic.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Highlight-Blue.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Highlight-Clean.css' %}">
+    <link rel="stylesheet" href="{% static 'css/project-card.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body style="background: rgb(193,227,255);">
+    <nav class="navbar navbar-light navbar-expand bg-light navigation-clean">
+        <div class="container-fluid"><a class="navbar-brand font-monospace text-uppercase" href="{% url "Investor:vc_invest" %}" style="font-size: 30px;">VC Investor</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"></button>
+            <div class="collapse navbar-collapse" id="navcol-1"><a class="btn btn-primary ms-auto" role="button" href="">Profile</a></div>
+        </div>
+    </nav>
+    <h1 class="display-1 text-center">Watchlist</h1>
+    <section class="features-boxed" style="background: rgb(193,227,255);">
+        <div class="container">
+            <div class="row justify-content-center align-items-center features">
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="card"><img class="card-img-top w-100 d-block">
+                        <div class="card-body">
+                            <h4 class="card-title">Name</h4>
+                            <h6 class="text-muted card-subtitle mb-2">Sector</h6>
+                            <p class="card-text">Description of start-up that is truncated to at least 30 words</p><button class="btn btn-primary" type="button">Info</button><button class="btn btn-primary" type="button" style="margin-left: 20px;">Remove</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
